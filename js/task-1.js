@@ -40,14 +40,232 @@
 //   console.log("Blocked from typing in chat!");
 // }
 
-function canUseChat(isOnline, isBlocked) {
-  const canChat = isOnline && !isBlocked;
-  if (canChat) {
-    return `Can type in chat!`;
-  } else {
-    return `Blocked from typing in chat!`;
-  }
-}
-console.log(canUseChat(true, false)); // "Can type in chat!"
-console.log(canUseChat(false, false)); // "Blocked from typing in chat!"
-console.log(canUseChat(true, true)); // "Blocked from typing in chat!"
+// function canUseChat(isOnline, isBlocked) {
+//   const canChat = isOnline && !isBlocked;
+//   if (canChat) {
+//     return `Can type in chat!`;
+//   } else {
+//     return `Blocked from typing in chat!`;
+//   }
+// }
+// console.log(canUseChat(true, false)); // "Can type in chat!"
+// console.log(canUseChat(false, false)); // "Blocked from typing in chat!"
+// console.log(canUseChat(true, true)); // "Blocked from typing in chat!"
+
+// let count = 0;
+// while (count < 20) {
+//   console.log(`Count: ${count}`);
+//   count += 2;
+// }
+
+// function countClients(clientCounter, maxClients) {
+//   let counter = clientCounter;
+//   while (counter < maxClients) {
+//     counter += 1;
+//     console.log(counter);
+//   }
+// }
+// countClients(0, 3); // 8 9 10 11
+
+// function calculateTotal(number) {
+//   let total = 0;
+//   let i = 1;
+
+//   while (i <= number) {
+//     total += i;
+//     i += 1;
+//   }
+//   console.log(total);
+// }
+// calculateTotal(24);
+
+// function calculateTotal(number) {
+//   let total = 0;
+//   let i = 1; // починаємо з 1
+
+//   while (i <= number) {
+//     total = +i; // додаємо 1, потім 2, потім 3...
+//     i += 1; // збільшуємо лічильник
+//   }
+
+//   return total;
+// }
+
+// console.log(calculateTotal(3));
+
+// let count = 6;
+
+// do {
+//   console.log(`Count: ${count}`);
+//   count += 1;
+// } while (count < 5);
+
+// for (let i = 0; i <= 20; i += 5) {
+//   console.log(i);
+// }
+
+// FOR // цикли
+
+// function sumUpTo(number) {
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(sumUpTo(5)); // 15
+// console.log(sumUpTo(10)); // 55
+// console.log(sumUpTo(0)); // 0
+
+// function calculateTotal(number) {
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(calculateTotal(3)); // 6
+// console.log(calculateTotal(5)); // 15
+// console.log(calculateTotal(10)); // 55
+
+// let x = 5;
+// const y = x++;
+// console.log(x); // 6
+// console.log(y); // 5
+
+// function calculateEvenTotal(number) {
+//   let sum = 0;
+//   for (let i = 0; i <= number; ++i) {
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(calculateEvenTotal(5)); // 6
+// console.log(calculateEvenTotal(10)); // 30
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i);
+
+//   if (i === 5) {
+//     console.log("Met the number 5, interrupt the execution of the cycle");
+//     break;
+//   }
+// }
+
+// console.log("Log after cycle");
+
+// function calculateTo(start, end) {
+//   let number;
+
+//   for (let i = start; i <= end; i++)
+//     if (i % 5 === 0) {
+//       number = i;
+//       break;
+//     }
+//   return number;
+// }
+// console.log(calculateTo(6, 17)); // 10
+// console.log(calculateTo(17, 25)); // 20
+// console.log(calculateTo(31, 40)); // 35
+
+// const start = 6;
+// const end = 17;
+// let number;
+
+// for (let i = start; i <= end; i++) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+
+// function findNumber(max, target) {
+//   console.log("Log in the body of the function before the cycle");
+
+//   for (let i = 5; i <= max; i += 1) {
+//     console.log("Current counter value i:", i);
+
+//     if (i === target) {
+//       console.log(`Found the number $ {target}, interrupt the cycle`);
+//       break;
+//     }
+//   }
+
+//   console.log("Log in body function after cycle");
+// }
+
+// findNumber(10, 9);
+// console.log("Log after exiting function");
+
+// function findNumber(max, target) {
+//   console.log("Log in the body of the function before the cycle");
+
+//   for (let i = 5; i <= max; i += 1) {
+//     console.log("Current counter value i:", i);
+
+//     if (i === target) {
+//       console.log(
+//         `Found the number $ {target}, we make a return, interrupting the loop and function`
+//       );
+//       return i;
+//     }
+//   }
+
+//   // Цей console.log не виконується
+//   console.log("Log in body function after cycle");
+// }
+
+// const result = findNumber(10, 6);
+// console.log("Log after exiting function");
+// console.log(`Result of function execution ${result}`);
+
+// const number = prompt("Enter a number between 1 and 10:");
+// // console.log(typeof number);
+// let msg;
+// if (Number(number)) {
+//   if (Number(number) > 12) {
+//     msg = "Number is greater than 12";
+//   } else {
+//     msg = "Number is 12 or less";
+//   }
+// } else {
+//   msg = "Invalid input, not a number";
+// }
+// console.log(msg);
+
+// const points = 5000;
+// if (points <= 500) {
+//   console.log("level 1");
+// } else if (points > 500 && points <= 1500) {
+//   console.log("level 2");
+// } else if (points > 1500 && points <= 3000) {
+//   console.log("level 3");
+// } else {
+//   console.log("level 4");
+// }
+
+// const balans = Math.random() * 200 - 100;
+// console.log(balans);
+
+// let message = balans >= 0 ? "Posityve balans" : "Negative balans";
+// // if (balans >= 0) {
+// //   message = "Posityve balans";
+// // } else {
+// //   message = "Negative balans";
+// // }
+// console.log(message);
+
+// function dish(dishName) {
+//   return function (chiefName) {
+//     return `${chiefName} is cooking ${dishName}`;
+//   };
+// }
+// const scrambledEggs = dish("scrambled eggs");
+// const pasta = dish("pasta");
+// console.log(pasta("Mike")); // "Mike is cooking pasta"
+// console.log(pasta("Sara")); // "Sara is cooking pasta"
+// console.log(scrambledEggs("John")); // "John is cooking scrambled eggs"
+// console.log(scrambledEggs("Alice")); // "Alice is cooking scrambled eggs"
