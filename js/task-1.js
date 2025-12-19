@@ -269,3 +269,124 @@
 // console.log(pasta("Sara")); // "Sara is cooking pasta"
 // console.log(scrambledEggs("John")); // "John is cooking scrambled eggs"
 // console.log(scrambledEggs("Alice")); // "Alice is cooking scrambled eggs"
+
+// const planets = ["Earth", "Mars", "Venus", "Uranus"];
+// console.log("🚀 ~ planets:", planets);
+// const firstElement = planets[0];
+
+// console.log("🚀 ~ firstElement:", firstElement);
+// planets[0] = "Jupiter";
+
+// planets[2] = "Neptune";
+// console.log("🚀 ~ planets:", planets);
+
+// function getOrderQuantity(order) {
+//   console.log(order.length);
+// }
+// getOrderQuantity(["apple", "peach", "pear", "banana"]);
+// getOrderQuantity(["apple", "banana"]);
+// getOrderQuantity([]);
+
+// function getLastElementMeta(array) {
+//   return [array.length - 1, array[array.length - 1]];
+// }
+// console.log(getLastElementMeta(["apple", "peach", "pear", "banana"]));
+
+// function getExtremeElements(array) {
+//   return [array[array.length - array.length], array[array.length - 1]];
+// }
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+
+// let a = 5;
+// let b = a;
+// console.log("🚀 ~ b:", b);
+// console.log("🚀 ~ a:", a);
+// a = 10;
+// console.log("🚀 ~ a:", a);
+// console.log("🚀 ~ b:", b);
+
+// const a = ["Mango", "Poly"];
+// const b = a;
+// console.log("🚀 ~ a:", a);
+// console.log("🚀 ~ b:", b);
+// a[1] = "Jacob";
+// console.log("🚀 ~ a:", a);
+// console.log("🚀 ~ b:", b);
+
+// b[0] = "Ajax";
+// console.log("🚀 ~ a:", a);
+// console.log("🚀 ~ b:", b);
+
+// const array = [1, 3, 5];
+// console.log(String(array));
+// console.log(Number(array.join("")));
+// console.log(Number(array[0]), array[1], array[2]);
+// console.log(array.join("-"));
+
+// console.log(array.reduce((sum, num) => sum + num, 0));
+
+// const words = ["JavaScript", "is", "amazing"];
+// console.log(words.join(""));
+// console.log(words.join(" "));
+// console.log(words.join("-"));
+
+// function transfornString(string) {
+//   const words = string.split("_");
+//   return words.join("-");
+// }
+// console.log(transfornString("user_ege"));
+// console.log(transfornString("price_per_droid"));
+
+// function getLength(array) {
+//   const words = array.join("");
+//   return words.length;
+// }
+// console.log(getLength(["Mango", "hurries", "to", "the", "train"]));
+// console.log(getLength(["M", "a", "n", "g", "o"]));
+
+// const name = "Mngo";
+// const letters = name.split("");
+// console.log("🚀 ~ letters:", letters);
+
+// const message = "JavaScript essentials";
+// const words = message.split(" ");
+// console.log("🚀 ~ words:", words);
+
+// const slug = "amazing-french-recipes";
+// const slugParts = slug.split("-");
+// console.log("🚀 ~ slugParts:", slugParts);
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
+// const result = planets.slice(0, 2);
+// console.log(result);
+// console.log(planets.slice(0, 4));
+// console.log(planets.slice(1, 3));
+
+// function getSlice(array, value) {
+//   const total = array.indexOf(value);
+//   return array.slice(0, total + 1);
+// }
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Poly"));
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Ajax"));
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Mango"));
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Jacob"));
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Casey"));
+
+// const tags = [];
+// for (let i = 0; i < 5; i++) {
+//   tags.push(`tag-${i}`);
+// }
+// console.log("🚀 ~ tags:", tags);
+
+// function createArrayOfNumbers(min, max) {
+//   const total = [];
+//   for (let i = min; i <= max; i += 1) {
+//     total.push(i);
+//   }
+//   return total;
+// }
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+// console.log(createArrayOfNumbers());
