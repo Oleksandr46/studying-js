@@ -390,3 +390,88 @@
 // console.log(createArrayOfNumbers(14, 17));
 // console.log(createArrayOfNumbers(29, 34));
 // console.log(createArrayOfNumbers());
+
+// const planets = ["Earth", "Mars", "Venus"];
+// for (let I = 0; I < planets.length; I++) {
+//   console.log(planets[I]);
+// }
+
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+//   for (let i = 0; i < order.length; i++) {
+//     sum += order[i];
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// function getEvenNumbers(start, end) {
+//   let sum = [];
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//       sum.push(i);
+//     }
+//   }
+//   return sum;
+// }
+// console.log(getEvenNumbers(2, 5));
+// console.log(getEvenNumbers(3, 11));
+// console.log(getEvenNumbers(6, 12));
+// console.log(getEvenNumbers(8, 8));
+// console.log(getEvenNumbers(7, 7));
+
+// const planets = ["Earth", "Mars", "Venus"];
+// console.log(planets.includes("Earth"));
+// console.log(planets.includes("Mars"));
+// console.log(planets.includes("Venus"));
+// console.log(planets.includes("Jupiter"));
+
+// const fruits = ["apple", "banana", "orange"];
+// if (fruits.includes("banana")) {
+//   console.log("The array has an element banana");
+// } else {
+//   console.log("Array does not contaun banana element");
+// }
+
+// function checkStorage(storage, item) {
+//   if (storage.includes(item.toLowerCase())) {
+//     return `${item.toLowerCase()} is available to order!`;
+//   } else {
+//     return `Sorry! We are out of stock!`;
+//   }
+// }
+// console.log(checkStorage(["apple", "plum", "pear"], "plum"));
+// console.log(checkStorage(["apple", "plum", "pear"], "pLuM"));
+// console.log(checkStorage(["apple", "plum", "pear"], "pear"));
+// console.log(checkStorage(["apple", "plum", "pear"], "pEAr"));
+// console.log(checkStorage(["apple", "plum", "pear"], "orange"));
+// console.log(checkStorage(["apple", "plum", "pear"], "carrot"));
+
+// function getCommonElements(array1, array2) {
+//   let total = [];
+//   for (let i of array1) {
+//     if (array2.includes(i)) {
+//       total.push(i);
+//     }
+//   }
+//   return total;
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+//   for (const element of order) {
+//     sum += element;
+//   }
+//   return sum;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
