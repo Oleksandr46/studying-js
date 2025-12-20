@@ -450,21 +450,48 @@
 // console.log(checkStorage(["apple", "plum", "pear"], "orange"));
 // console.log(checkStorage(["apple", "plum", "pear"], "carrot"));
 
+// **Функція getCommonElements(array1, array2), приймає два масиви
+// * (array1 та array2) довільної довжини в якості параметрів.
+// * Доповни код функції:
+// * Створи порожній масив для зберігання нового масиву.
+// * Використай цикл for для ітерації кожного елемента у array1.
+// * У тілі циклу перевір, чи поточний елемент існує у array2 за допомогою методу includes.
+// * Якщо він існує, то додай елемент до нового масиву.
+// * Поверни наповнений масив спільних елементів як результат роботи функції.
+// */
+// // Цикл FOR...OF
+// // function getCommonElements(array1, array2) {
+// //   let total = [];
+// //   for (let i of array1) {
+// //     if (array2.includes(i)) {
+// //       total.push(i);
+// //     }
+// //   }
+// //   return total;
+// // }
+// // Цикл FOR
 // function getCommonElements(array1, array2) {
 //   let total = [];
-//   for (let i of array1) {
-//     if (array2.includes(i)) {
-//       total.push(i);
+
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array2.includes(array1[i])) {
+//       total.push(array1[i]);
 //     }
 //   }
+
 //   return total;
 // }
-// console.log(getCommonElements([1, 2, 3], [2, 4]));
-// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
-// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
-// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
-// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
 
+// console.log(getCommonElements([1, 2, 3], [2, 4])); //[2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); //[1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); //[12, 27, 3]
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); //[10, 30, 40]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));//[]
+
+//** Доповни код функції calculateTotalPrice(order) так,
+// * щоб вона повертала загальну суму чисел в масиві order.
+// * Використай цикл for...of для перебору масиву.
+// */
 // function calculateTotalPrice(order) {
 //   let sum = 0;
 //   for (const element of order) {
@@ -472,6 +499,47 @@
 //   }
 //   return sum;
 // }
-// console.log(calculateTotalPrice([12, 85, 37, 4]));
-// console.log(calculateTotalPrice([164, 48, 291]));
-// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice([12, 85, 37, 4]));//138
+// console.log(calculateTotalPrice([164, 48, 291]));//503
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));//1116
+
+//** Функція createReversedArray() може приймати довільну кількість аргументів.
+// * Доповни код функції так, щоб вона повертала масив усіх аргументів,
+// * але в масиві вони повинні йти у зворотному порядку. Тобто,
+// * при виклику createReversedArray(1, 2, 3), функція має повернути масив [3, 2, 1].
+// * Використовуй цикл або метод масиву toReversed(),
+// * який застосовується до масиву і результатом роботи
+// * повертає новий масив з елементами у зворотньому порядку.
+// */
+
+// function createReversedArray() {
+//   let args = Array.from(arguments);
+//   let total = args.toReversed();
+//   return total;
+// }
+
+// console.log(createReversedArray(12, 85, 37, 4)); //[4, 37, 85, 12]
+// console.log(createReversedArray(164, 48, 291)); //[291, 48, 164]
+// console.log(createReversedArray(412, 371, 94, 63, 176)); //[176, 63, 94, 371, 412]
+// console.log(createReversedArray()); //[]
+
+//**
+// * Функція calculateTax(amount, taxRate) оголошує два параметри:
+// * amount - число, сума від якої потрібно обчислити податок.
+// * Обов'язковий параметр.
+// * taxRate - число, податкова ставка. Необов'язковий параметр.
+// * За замовчуванням його значення має бути 0.2.
+// * Доповни код функції так, щоб вона повертала суму податку -
+// * результат множення суми на податкову ставку.
+//*/
+// function calculateTax(amount, taxRate = 0.2) {
+//   return amount * taxRate;
+// }
+// console.log(calculateTax(100, 0.1)); //10
+// console.log(calculateTax(200, 0.1)); //20
+// console.log(calculateTax(100, 0.2)); //20
+// console.log(calculateTax(200, 0.2)); //40
+// console.log(calculateTax(100, 0.3)); //30
+// console.log(calculateTax(200, 0.3)); //60
+// console.log(calculateTax(100)); //20
+// console.log(calculateTax(200)); //40
