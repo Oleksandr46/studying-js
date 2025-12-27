@@ -270,16 +270,15 @@
 //  * Напиши функцію formatTime(minuts) яка переведе значення minuts
 //  * (кількість хвилин) у рядок у форматі годин та хвилин HH:MM
 //  */
-function formatTime(minuts) {
-  const hours = Math.trunc(minuts / 60);
-  const minutes = minuts % 60;
 
-  return `${normalizeDigits(hours)}:${normalizeDigits(minutes)}`;
-}
-
-console.log(formatTime(70)); // "01:10"
-console.log(formatTime(450)); // "07:30"
-console.log(formatTime(1441)); // "24:01"
-function normalizeDigits(number) {
-  return String(number).padStart(2, "0");
-}
+// function formatTime(minuts) {
+//   const hours = Math.trunc(minuts / 60);
+//   const minutes = minuts % 60;
+//   return `${normalizeDigits(hours)}:${normalizeDigits(minutes)}`;
+// }
+// console.log(formatTime(70)); // "01:10"
+// console.log(formatTime(450)); // "07:30"
+// console.log(formatTime(1441)); // "24:01"
+// function normalizeDigits(number) {
+//   return String(number).padStart(2, "0");
+// }

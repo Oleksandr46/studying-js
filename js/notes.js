@@ -543,3 +543,33 @@
 // console.log(calculateTax(200, 0.3)); //60
 // console.log(calculateTax(100)); //20
 // console.log(calculateTax(200)); //40
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+// };
+
+// const aptRating = apartment.rating;
+// console.log("🚀 ~ aptRating:", aptRating);
+// const aptDescr = apartment.descr;
+// console.log("🚀 ~ aptDescr:", aptDescr);
+// const aptPrice = apartment["price"];
+// console.log("🚀 ~ aptPrice:", aptPrice);
+// const aptTags = apartment["tags"];
+// console.log("🚀 ~ aptTags:", aptTags);
+// const aptTags1 = apartment.tags[0];
+// console.log("🚀 ~ aptTags1:", aptTags1);
+// const aptTags2 = apartment.tags[2];
+// console.log("🚀 ~ aptTags2:", aptTags2);
+
+const emailInputName = "email";
+const passwordInputName = "password";
+
+const credentials = {
+  [emailInputName]: "henry.carter@aptmail.com",
+  [passwordInputName]: "jqueryismyjam",
+};
+console.log("🚀 ~ credentials:", credentials);
