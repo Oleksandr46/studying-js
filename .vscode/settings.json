@@ -1,0 +1,15 @@
+{
+  "turboConsoleLog.logMessagePrefix": "",
+  "turboConsoleLog.delimiterInsideMessage": "",
+  "turboConsoleLog.wrapLogMessage": false,
+  "turboConsoleLog.logCorrectionNotificationEnabled": false,
+  "turboConsoleLog.insertEmptyLineBeforeLogMessage": false,
+  "turboConsoleLog.insertEmptyLineAfterLogMessage": false,
+  "turboConsoleLog.includeLineNum": false,
+  "turboConsoleLog.includeFilename": false,
+  "turboConsoleLog.addSemicolonInTheEnd": false,
+  "turboConsoleLog.isTurboTelemetryEnabled": false,
+  "turboConsoleLog.insertEnclosingFunction": false,
+  "turboConsoleLog.insertEnclosingClass": false,
+  "turboConsoleLog.dynamicFreemiumPanel": false
+}

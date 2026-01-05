@@ -280,5 +280,78 @@
 // console.log(formatTime(450)); // "07:30"
 // console.log(formatTime(1441)); // "24:01"
 // function normalizeDigits(number) {
-//   return String(number).padStart(2, "0");
+//  return String(number).padStart(2, "0");
 // }
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+// let totalFeedback = 0;
+// let counter = 0;
+// // for (const key in feedback) {
+// //   totalFeedback += feedback[key];
+// //   counter++;
+// // }
+// // console.log("🚀 ~ counter:", counter);
+// // console.log("Mean feedback", totalFeedback / counter);
+
+// const keys = Object.keys(feedback);
+// console.log("🚀 ~ keys:", keys);
+// const values = Object.values(feedback);
+// console.log("🚀 ~ values:", values);
+
+// for (const value of values) {
+//   totalFeedback += value;
+// }
+// console.log("🚀 ~ totalFeedback:", totalFeedback);
+
+// /**
+//  * Напиши скрипт, який для обєкта user, послідовно:
+//  * додає поле mood зі значенням "happy",
+//  * замінює значення hobby на "skydiving"
+//  * замінює значення premium на false
+//  * виводить вміст об'єкта user у форматі ключ: значення використовуючи Object.keys()
+//  * та for...of
+//  */
+
+// const user = {
+//   name: "Mango",
+//   age: 20,
+//   hobby: "html",
+//   premium: true,
+// };
+
+// user.mode = "happy";
+// user.hobby = "skydiving";
+// user.premium = !user.premium;
+
+// const keys = Object.keys(user); //[]
+// console.log("🚀 ~ keys:", keys);
+// for (const key of keys) {
+//   const message = `${key} : ${user[key]}`;
+//   console.log(message);
+// }
+
+// /**
+//  * У нас є об'єкт, де зберігається зарплати нашої команди. Напишіть код для
+//  * підсумовання всіх зарплат і збережіть резудьтат у змінній sum.
+//  * Повинно вийти 390. Якщо об'єкт salaries порожній, то результат має бути 0.
+//  */
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Peye: 130,
+// };
+
+// let sum = 0;
+// const keys = Object.values(salaries);
+
+// if (keys !== 0) {
+//   for (const key of keys) {
+//     sum += key;
+//   }
+// }
+// console.log(sum);
