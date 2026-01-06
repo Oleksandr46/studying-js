@@ -408,13 +408,3 @@
 //   ...userSettings,
 // };
 // console.log("🚀 ~ finalSettings:", finalSettings);
-
-// /**
-//  * Типів транзакцій всього два.
-//  * Можна покласти чи зняти гроші з рахунку.
-//  */
-
-const Transaction = {
-  DEPOSIT: "deposit",
-  WITHDRAW: "withdraw",
-};
