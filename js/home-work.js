@@ -279,25 +279,133 @@
 //  * де <Username> — це ім’я профілю, а <amount> — кількість ігрових годин.
 //  */
 
-const profile = {
-  username: "Jacob",
-  playTime: 300,
-  changeUsername(newName) {
-    this.username = newName;
-  },
-  updatePlayTime(hours) {
-    this.playTime += hours;
-  },
+// const profile = {
+//   username: "Jacob",
+//   playTime: 300,
+//   changeUsername(newName) {
+//     this.username = newName;
+//   },
+//   updatePlayTime(hours) {
+//     this.playTime += hours;
+//   },
 
-  getInfo() {
-    return `${this.username} has ${this.playTime} active hours!`;
-  },
-};
+//   getInfo() {
+//     return `${this.username} has ${this.playTime} active hours!`;
+//   },
+// };
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo()); // "Marco has 320 active hours!"
 
-console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+// /**
+//  * Пошук друга за іменем
+//  */
 
-profile.changeUsername("Marco");
-console.log(profile.getInfo()); // "Marco has 300 active hours!"
+const friends = [
+  { name: "Mango", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: false },
+  { name: "Ajax", online: false },
+];
 
-profile.updatePlayTime(20);
-console.log(profile.getInfo()); // "Marco has 320 active hours!"
+// function firstFriendByName(allFriends, friendName) {
+//   for (const friend of allFriends) {
+//     if (friend.name === friendName) {
+//       return friend;
+//     }
+//   }
+//   console.log("Error!");
+
+//   return `${friendName} is not found`;
+// }
+// console.log(firstFriendByName(friends, "Poly"));
+// console.log(firstFriendByName(friends, "Chelsy"));
+
+// /**
+//  * Отримати імена всіх друзів
+//  */
+
+// function getAllNames(allFriends) {
+//   const names = [];
+//   for (let i = 0; i < allFriends.length; i++) {
+//     const friend = allFriends[i];
+//     console.log("🚀 ~ element:", friend.name);
+//     names.push(friend.name);
+//   }
+//   return names;
+// }
+// console.log(getAllNames(friends));
+
+// /**
+//  * Отримуємо імена тільки тих друзів, які зараз онлайн
+//  */
+
+// function getOnlineFriends(allFriends) {
+//   const friendsOnline = [];
+//   for (const friend of allFriends) {
+//     if (friend.online) {
+//       friendsOnline.push(friend.name);
+//     }
+//   }
+//   return friendsOnline;
+// }
+// console.log(getOnlineFriends(friends));
+
+// /**
+//  * Напишіть функцію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та
+//  * рядок з назвою каменю. Функція рахує і повертає загальну вариість з таким ім'ям, ціною та
+//  * кількістю з об'єкта.
+//  */
+
+// const stones = [
+//   { name: "Смарагд", price: 1300, quantity: 4 },
+//   { name: "Діамант", price: 2700, quantity: 3 },
+//   { name: "Сапфір", price: 400, quantity: 7 },
+//   { name: "Щебінь", price: 200, quantity: 2 },
+// ];
+
+// function calcTotalPrice(stones, stoneName) {
+//   for (const stone of stones) {
+//     if (stone.name === stoneName) {
+//       const total = stone.price * stone.quantity;
+//       return `Вартість каміння ${stone.name} складає ${total} y.o`;
+//     }
+//   }
+//   return `В крамниці відсутнє каміння ${stoneName}`;
+// }
+
+// console.log(calcTotalPrice(stones, "Діамант"));
+// console.log(calcTotalPrice(stones, "Діама"));
+
+// const user = {
+//   name: "Mango",
+//   city: "Kyiv",
+//   ...{
+//     city: "Lviv",
+//     Street: "Mazepy",
+//     building: 10,
+//   },
+// };
+// console.log("🚀 ~ user:", user);
+
+// const registeredUser = {
+//   nickname: "YK",
+//   email: "exsample@gmail.com",
+//   phone: "+38 099 123-45-67",
+// };
+// console.log("🚀 ~ registeredUser:", registeredUser);
+// const updateProfile = {
+//   nickname: "Ajax",
+//   phone: "+38 077 123-45-67",
+// };
+// const updateInfo = {
+//   ...registeredUser,
+//   ...updateProfile,
+// };
+// console.log("🚀 ~ updateInfo:", updateInfo);
+
+const temperatureMonday = [10, 12, 11];
+const temperatureTuesday = [10, 12, 11];
+const temperatureMonday = [10, 12, 11];

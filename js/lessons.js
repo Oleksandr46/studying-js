@@ -355,3 +355,66 @@
 //   }
 // }
 // console.log(sum);
+
+// const temperatureMonday = [10, 12, 11];
+// const temperatureTuesday = [8, 8, 9];
+// const temperatureWednesday = [12, 10, 8];
+
+// const temperetureByThreDay = [
+//   ...temperatureMonday,
+//   ...temperatureTuesday,
+//   ...temperatureWednesday,
+// ];
+// console.log("🚀 ~ temperetureByThreDay:", temperetureByThreDay);
+// const maxTemperature = Math.max(...temperetureByThreDay);
+// console.log("🚀 ~ maxTemperature:", maxTemperature);
+// const minTemperature = Math.min(...temperetureByThreDay);
+// console.log("🚀 ~ minTemperature:", minTemperature);
+
+// /**
+//  * Створення масиву і тип за посиланням
+//  */
+
+// const a = [{ x: 1 }, { y: 2 }, { z: 3 }];
+// const b = [...a];
+
+// console.log("🚀 ~ a:", a);
+// console.log("🚀 ~ b:", b);
+// console.log(a === b);
+
+// /**
+//  * Створення об'єкта
+//  */
+// const objA = { x: 1, Y: 2 };
+// const objB = { x: 0, Z: 3 };
+// const objC = { ...objA, ...objB };
+// console.log("🚀 ~ objC:", objC);
+
+// /**
+//  * Оновлення налаштування користувача
+//  */
+// const defaultSettings = {
+//   theme: "light",
+//   showNotifications: true,
+//   hideSidebar: false,
+// };
+
+// const userSettings = {
+//   showNotifications: false,
+//   hideSidebar: true,
+// };
+// const finalSettings = {
+//   ...defaultSettings,
+//   ...userSettings,
+// };
+// console.log("🚀 ~ finalSettings:", finalSettings);
+
+// /**
+//  * Типів транзакцій всього два.
+//  * Можна покласти чи зняти гроші з рахунку.
+//  */
+
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
