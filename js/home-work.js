@@ -405,7 +405,3 @@ const friends = [
 //   ...updateProfile,
 // };
 // console.log("🚀 ~ updateInfo:", updateInfo);
-
-const temperatureMonday = [10, 12, 11];
-const temperatureTuesday = [10, 12, 11];
-const temperatureMonday = [10, 12, 11];
