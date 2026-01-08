@@ -644,34 +644,113 @@ const account = {
 //  * в об'єкті в окремий метод exist()
 //  */
 
-const calculator = {
-  read(a, b) {
-    this.a = a;
-    this.b = b;
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   sum() {
+//     if (this.exist()) {
+//       return this.a + this.b;
+//     }
+//     return "Not values";
+//   },
+//   mult() {
+//     if (this.exist()) {
+//       return this.a * this.b;
+//     }
+//     return "Not values";
+//   },
+//   reise() {
+//     if (this.exist()) {
+//       return this.a ** this.b;
+//     }
+//     return "Not values";
+//   },
+//   exist() {
+//     return this.a && this.b;
+//   },
+// };
+// calculator.read(2, 5);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
+// console.log(calculator.reise());
+
+// ** 6. Створіть телефонну книгу - об'єкт phonebook,
+// * у якого є властивість contacts (список контактів)
+// * та методи управління книгою:
+// * add(data) - приймає об'єкт data, де зберігається
+// * name, email, category може зберігатись чи ні,
+// * створіть обʼєкт з властивостями  name, email, category, id, createdAt
+// * (name i email - обов'язкові параметри, які треба передавати
+// * при додаванні нового контакта,
+// * category - може передаватись чи ні, якщо ні - має
+// * приймати значення "default",
+// * id та createdAt генеруються відповідними методами:
+// * generateId() і getDate());
+// * *не забудь додати перевірку, якщо контакт з таким ім'ям чи імейлом вже є - ми його не додаємо
+// * list() - виводить список контактів у вигляді таблиці;
+// * filtered(category) - фільтрує контактів по обраній категорії (друзі, робота і т.д.)
+// * delete(name) - видаляє контакт з заданим ім'ям;
+// * updateName(oldName, newName) - зиінює ім'я контакта;
+
+const phonebook = {
+  contacts: [],
+  add(data) {
+    const newContact = {
+      name: data.name,
+      email: data.email,
+      category: data.category || "defoult",
+      id: this.generateId(),
+      createdAt: this.getData(),
+    };
+    this.contacts.push(newContact);
   },
-  sum() {
-    if (this.exist()) {
-      return this.a + this.b;
+  list() {
+    console.table(this.contacts);
+  },
+  filtered(category) {
+    const filtreArr = [];
+    for (const contact of this.contacts) {
+      console.log(contact);
+
+      if (contact.category === category) {
+        filtreArr.push(contact);
+      }
     }
-    return "Not values";
+    console.log(filtreArr);
   },
-  mult() {
-    if (this.exist()) {
-      return this.a * this.b;
+  dalete(name) {
+    for (let i = 0; i < this.contacts.length; i++) {
+      if (this.contacts[i].name === name) {
+        this.contacts.splice(i, 1);
+      }
     }
-    return "Not values";
   },
-  reise() {
-    if (this.exist()) {
-      return this.a ** this.b;
-    }
-    return "Not values";
+  updateName(oldName, newName) {},
+  generateId() {
+    return "#" + Math.random().toString(36).substr(2, 9);
   },
-  exist() {
-    return this.a && this.b;
+  getData() {
+    return Date.now();
   },
 };
-calculator.read(2, 5);
-console.log(calculator.sum());
-console.log(calculator.mult());
-console.log(calculator.reise());
+
+phonebook.add({
+  name: "Mahgo",
+  email: "mango@gmail.com",
+  category: "friends",
+});
+phonebook.add({
+  name: "Poly",
+  email: "poly@gmail.com",
+});
+phonebook.add({
+  name: "Katy",
+  email: "katy@gmail.com",
+  category: "friends",
+});
+
+// phonebook.dalete("Poly");
+// phonebook.list();
+// phonebook.filtered("friends");
