@@ -1103,3 +1103,115 @@
 // ];
 // const getUserEmails = users => users.map(user => user.email);
 // console.log(getUserEmails(users));
+
+// /**
+//  * У змінній players зберігається масив об'єктів, кожен з яких має властивості name, playtime та gamesPlayed.
+//  * Нашому сервісу необхідно розрахувати середній час, проведений в одній грі для кожного гравця,
+//  * і отримати загальну суму цих значень часу у змінній totalAveragePlaytimePerGame.
+//  * Розрахувати час для кожного з гравців можна, розділивши його час (властивість playtime)
+//  * на кількість ігор (властивість gamesPlayed).
+//  */
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//   return total + player.playtime / player.gamesPlayed;
+// }, 0);
+// console.log("🚀 ~ totalAveragePlaytimePerGame:", totalAveragePlaytimePerGame);
+
+// /**
+//  * Масив books містить масив об'єктів книг, кожен з яких містить властивості title, author, rating.
+//  * Доповни код таким чином, щоб:
+//  * У змінній sortedByAuthorName вийшов масив книг, відсортований за ім'ям автора в алфавітному порядку.
+//  * У змінній sortedByReversedAuthorName вийшов масив книг, відсортований за ім'ям автора у зворотному алфавітному порядку.
+//  * У змінній sortedByAscendingRating вийшов масив книг, відсортований за зростанням рейтингу.
+//  * У змінній sortedByDescentingRating вийшов масив книг, відсортований за спаданням рейтингу.
+//  */
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Tell-Tale Heart",
+//     author: "Edgar Allan Poe",
+//     rating: 7.75,
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     rating: 7.94,
+//   },
+//   {
+//     title: "Enemy of God",
+//     author: "Bernard Cornwell",
+//     rating: 8.67,
+//   },
+// ];
+
+// const sortedByAuthorName = books.toSorted((firstAutor, secondAutor) =>
+//   firstAutor.author.localeCompare(secondAutor.author)
+// );
+
+// const sortedByReversedAuthorName = books.toSorted((firstAutor, secondAutor) =>
+//   secondAutor.author.localeCompare(firstAutor.author)
+// );
+
+// const sortedByAscendingRating = books.toSorted(
+//   (firstRating, secondRating) => firstRating.rating - secondRating.rating
+// );
+
+// const sortedByDescentingRating = books.toSorted(
+//   (firstRating, secondRating) => secondRating.rating - firstRating.rating
+// );
+
+// console.log("🚀 ~ sortedByAuthorName:", sortedByAuthorName);
+// console.log("🚀 ~ sortedByReversedAuthorName:", sortedByReversedAuthorName);
+// console.log("🚀 ~ sortedByAscendingRating:", sortedByAscendingRating);
+// console.log("🚀 ~ sortedByDescentingRating:", sortedByDescentingRating);
+
+// /**
+//  * Масив books містить масив об'єктів книг, кожен з яких містить властивості title, author, rating.
+//  * Доповни код таким чином, щоб у змінній names вийшов масив імен авторів в алфавітному порядку,
+//  * рейтинг книг яких більший за значення змінної MIN_BOOK_RATING. Використовуй ланцюжок методів.
+//  */
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Tell-Tale Heart",
+//     author: "Edgar Allan Poe",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// const names = books
+//   .filter(book => book.rating >= MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .toSorted((firstAutor, secondAutor) => firstAutor.localeCompare(secondAutor));
+
+// console.log("🚀 ~ names:", names);
