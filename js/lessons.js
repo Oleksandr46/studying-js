@@ -408,3 +408,517 @@
 //   ...userSettings,
 // };
 // console.log("🚀 ~ finalSettings:", finalSettings);
+
+// function registerGuest(name, callback) {
+//   callback(name);
+// }
+// registerGuest("Mango", function (guestName) {
+//   console.log(`Ласкаво просимо`);
+// });
+// registerGuest("Mango", function (guestName) {
+//   console.log(`Чи потрібно ваш номер ${guestName}`);
+// });
+// registerGuest("Poly", function (guestName) {
+//   console.log(`Ласкаво просимо постійних гостей ${guestName}`);
+// });
+
+// function calc(a, b, callback) {
+//   const result = callback(a, b);
+//   console.log("🚀 ~ result:", result);
+// }
+// calc(2, 3, function (base, power) {
+//   return base ** power;
+// });
+// calc(10, 8, function (numinator, denominator) {
+//   return numinator % denominator;
+// });
+
+// /**
+//  * Напиши функцію each(array, callback), яка першим параметром очікує масив,
+//  * а другим - функція, яка застосовується до кожного елемента масиву.
+//  * Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
+//  */
+// function each(array, callback) {
+//   const newArray = [];
+//   for (const item of array) {
+//     const result = callback(item);
+//     newArray.push(result);
+//   }
+//   return newArray;
+// }
+// const res2 = each([64, 49, 36, 25, 16], function (value) {
+//   return value * 2;
+// });
+// console.log("🚀 ~ res2:", res2);
+
+// const res3 = each([64, 49, 36, 25, 16], function (value) {
+//   return value - 10;
+// });
+// console.log("🚀 ~ res3:", res3);
+
+// const res4 = each([64, 49, 36, 25, 16], function (value) {
+//   return Math.sqrt(value);
+// });
+// console.log("🚀 ~ res4:", res4);
+
+// const res5 = each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//   return Math.ceil(value);
+// });
+// console.log("🚀 ~ res5:", res5);
+
+// const res6 = each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//   return Math.floor(value);
+// });
+// console.log("🚀 ~ res6:", res6);
+
+// /**
+//  * Метод forEach(callback)
+//  * - Поелементно перебирає оригінальний масив
+//  * - Нічого не повертає
+//  * - Замінює класичниц for, якщо не потрібно переривати цикл.
+//  */
+
+// const numbers = [5, 10, 15, 20, 25];
+// let total = 0;
+
+// numbers.forEach(number => (total += number));
+// console.log("🚀 ~ total:", total);
+
+// /**
+//  * Виконайте рефакторинг коду за допомогою методу forEach
+//  * та стрілочної функції
+//  */
+
+// // function logItems(items) {
+// //   console.log(items);
+// //   for (let i = 0; i < items.length; i++) {
+// //     console.log(`${i + 1} - ${items[i]}`);
+// //   }
+// // }
+
+// function logItems(items) {
+//   items.forEach((item, index) => console.log(`${index + 1} - ${item}`));
+// }
+
+// logItems(["Mango", "Poly", "Ajax"]);
+
+// /**
+//  * Виконайте рефакторинг коду за допомогою методу forEach
+//  * та стрілочної функції
+//  */
+// // function printContactsInfo({ names, phones }) {
+// //   const nameList = names.split(",");
+// //   const phoneList = phones.split(",");
+// //     for (let i = 0; i < nameList.length; i++) {
+// //       console.log(`${nameList[i]}: ${phoneList[i]}`);
+// //     }
+// // }
+
+// function printContactsInfo({ names, phones }) {
+//   const nameList = names.split(",");
+//   const phoneList = phones.split(",");
+//   nameList.forEach((name, index, array) => {
+//     console.log(`${name}: ${phoneList[index]}`);
+//   });
+// }
+
+// printContactsInfo({
+//   names: "Jacob,William,Solomon,Artemius",
+//   phones: "89001234567,89001112233,890055566377,890055566300",
+// });
+
+// /**
+//  * Виконайте рефакторинг коду за допомогою методу forEach
+//  * та стрілочної функції
+//  */
+
+// function calculateAverage(...args) {
+//   let total = 0;
+//   for (let i = 0; i < args.length; i++) {
+//     total += args[i];
+//   }
+//   return total / args.length;
+// }
+
+// function calculateAverage(...args) {
+//   let total = 0;
+//   args.forEach(element => (total += element));
+//   return total / args.length;
+// }
+// console.log(calculateAverage(1, 2, 3, 4));
+
+// /**
+//  * Array.phototype.map()
+//  * - Поелементно перебирає оригінальний масив
+//  * - Не змінює оригінальний масив
+//  * - Повертає новий масив такоїж довжини
+//  */
+
+const allCars = [
+  {
+    make: "Honda",
+    model: "CR-V",
+    type: "suv",
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "Accord",
+    type: "sedan",
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: "Mazda",
+    model: "Mazda-6",
+    type: "sedan",
+    amount: 8,
+    price: 24195,
+    onSale: false,
+  },
+  {
+    make: "Mazda",
+    model: "CX-9",
+    type: "suv",
+    amount: 7,
+    price: 31520,
+    onSale: true,
+  },
+  {
+    make: "Toyotra",
+    model: "4Runner",
+    type: "suv",
+    amount: 19,
+    price: 34210,
+    onSale: false,
+  },
+  {
+    make: "Toyotra",
+    model: "Sequoia",
+    type: "suv",
+    amount: 16,
+    price: 45560,
+    onSale: false,
+  },
+  {
+    make: "Toyotra",
+    model: "Tacama",
+    type: "truck",
+    amount: 4,
+    price: 24320,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "F-150",
+    type: "truck",
+    amount: 11,
+    price: 27110,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Fusion",
+    type: "sedan",
+    amount: 13,
+    price: 22120,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Explorer",
+    type: "suv",
+    amount: 6,
+    price: 31660,
+    onSale: false,
+  },
+];
+
+// /**
+//  *  Нехай функція getModels повертає масив моделей (поле modal) всіх автомобілів.
+//  */
+// const getModels = cars => cars.map(item => item.model);
+// console.table(getModels(allCars));
+
+// const getModels = cars => {
+//   const modal = cars.map(item => item.model);
+//   return modal;
+// };
+// console.table(getModels(allCars));
+
+// /**
+//  * Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним
+//  * значенням властивості price залежно від переданої знижки.
+//  */
+
+// const makeCarsWithDiscount = (cars, discount) => {
+//   return cars.map(item => item.price * (1 - discount));
+// };
+
+// const makeCarsWithDiscount = (cars, discount) => {
+//   return cars.map(item => ({ ...item, price: item.price * (1 - discount) }));
+// };
+// console.table(makeCarsWithDiscount(allCars, 0.2));
+// console.table(makeCarsWithDiscount(allCars, 0.4));
+
+// /**
+//  * Метод flatMap()
+//  */
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+// const tags = tweets.flatMap((tweet, index, array) => {
+//   return tweet.tags;
+// });
+// console.log("🚀 ~ tags:", tags);
+
+// const updateTweets = tweets.map((tweet, index, array) => {
+//   return {
+//     ...tweet,
+//     likes: tweet.likes + 1,
+//     tags: [...tweet.tags.slice(0, -1)],
+//   };
+// });
+// console.log("🚀 ~ updateTweets:", updateTweets);
+
+// console.log("🚀 ~ tweets:", tweets);
+
+// /**
+//  * Метод Filter
+//  *
+//  * - Поелементно перебирає оригінальний масив
+//  * - Повертає новий масив (з елементами або порожній)
+//  * - Додає в масив, що повертається, елементи, які задовільняють умові коллбек-функції
+//  * - якщо коллбек повертає true елемент додається в масив, що повертається
+//  * - якщо коллбек повертає false елемент НЕ додається в масив, що повертається
+//  */
+
+// const number = [5, 10, 15, 20, 25];
+// const filteredNumbers = number.filter(number => {
+//   console.log(number < 11);
+
+//   return number < 11;
+// });
+// console.log("🚀 ~ filteredNumbers:", filteredNumbers);
+
+// /**
+//  * Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж
+//  * значення параметра threshold
+//  */
+// const filterByPrice = (cars, threshold) =>
+//   cars.filter(car => car.price < threshold);
+// console.log("🚀 ~ filterByPrice:", filterByPrice);
+// console.table(filterByPrice(allCars, 30000));
+// console.table(allCars, 30000);
+
+// /**
+//  * Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
+//  */
+// const getCarsWithDiscount = cars => {
+//   return cars.filter(car => {
+//     return car.onSale;
+//   });
+// };
+// console.table(getCarsWithDiscount(allCars));
+
+// /**
+//  * Нехай функція getCarsWithType повертає масив автомобілів тип яких зберігається
+//  * зі значенням параметра type.
+//  */
+
+// const getCarsWithType = (cars, type) => {
+//   return cars.filter(car => {
+//     return car.type === type;
+//   });
+// };
+// console.table(getCarsWithType(allCars, "suv"));
+// console.table(getCarsWithType(allCars, "sedan"));
+
+// const getCarsWithTypeAndPrice = (cars, type, threshold) => {
+//   let totalPrice = 0;
+//   // const filteredCarsByType = cars.filter(car => car.type === type);
+//   // const filteredCarsByprice = filteredCarsByType.filter(
+//   //   car => car.price < threshold
+//   // );
+//   // filteredCarsByprice.forEach(car => {
+//   //   totalPrice += car.price;
+//   // });
+//   cars
+//     .filter(car => car.type === type && car.price < threshold)
+//     .forEach(car => {
+//       totalPrice += car.price;
+//     });
+//   return totalPrice;
+// };
+
+// const result = getCarsWithTypeAndPrice(allCars, "suv", 32000);
+// console.log("🚀 ~ result:", result);
+
+// /**
+//  * Метод  find
+//  * - Поелементно перебирає оригінальний масив
+//  * - Повертає перший елемент, що задовільняє умоів або underfined
+//  */
+
+// const numbers = [5, 10, 15, 20, 25];
+// const number = numbers.find(number => number === 10);
+// console.log("🚀 ~ number:", number);
+
+// /**
+//  * Шукаємо машину за модуллю
+//  */
+// const getCarByModel = (cars, model) => cars.find(car => car.model === model);
+// console.log(getCarByModel(allCars, "F-150"));
+// /**
+//  * Шукаємо машину за типом кущова
+//  */
+// const getCarByType = (cars, type) => cars.find(car => car.type === type);
+
+// console.log(getCarByType(allCars, "sedan"));
+// console.log(getCarByType(allCars, "truck"));
+// console.log(getCarByType(allCars, "tank"));
+
+// /**
+//  * Метод every
+//  *
+//  * - Поелементно перебирає оригінальний масив
+//  * - Повертає true якщо всі елементи масиву задовольняють умову
+//  */
+const players = [
+  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: true },
+  { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: false },
+  { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
+  { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
+  { id: "player-5", name: "Chelsy", timePlayed: 280, points: 48, online: true },
+];
+// console.table(players);
+
+// const isAllOnline = players.every(player => player.online);
+// console.log("🚀 ~ isAllOnline:", isAllOnline);
+
+// /**
+//  * Метод some
+//  *
+//  * - Поелементно перебирає оригінальний масив
+//  * - Повертає true якщо хоча б один елементи масиву задовольняють умову
+//  */
+
+// const isAnyOnline = players.some(player => player.online);
+// console.log("🚀 ~ isAnyOnline:", isAnyOnline);
+
+// const anyHardcorePlayers = players.some(player => player.timePlayed > 1000);
+// console.log("🚀 ~ anyHardcorePlayers:", anyHardcorePlayers);
+
+// /**
+//  * Метод reduce
+//  *
+//  * - Поелементно перебирає оригінальний масив
+//  * - Значення, що повертається, залежить від розробника
+//  */
+
+// const numbers = [5, 10, 15, 20, 25];
+// const total = numbers.reduce((acc, number, index, array) => {
+//   return (acc += number);
+// }, 0);
+// console.log("🚀 ~ total:", total);
+
+// /**
+//  * Рахуємо загальну зарплату
+//  */
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajaks: 150,
+// };
+
+// const totalSalary = Object.values(salary).reduce(
+//   (acc, salary) => (acc += salary)
+// );
+// console.log("🚀 ~ totalSalary:", totalSalary);
+
+// /**
+//  * Рахуємо загальну кількість годин
+//  */
+
+// const totalTimePlayed = players.reduce((acc, player) => {
+//   return (acc += player.timePlayed);
+// }, 0);
+// console.log("🚀 ~ totalTimePlayed:", totalTimePlayed);
+
+// /**
+//  * Рахуємо загальну суму товарів кошика
+//  */
+
+// const cart = [
+//   { lable: "Apples", price: 100, quantity: 2 },
+//   { lable: "Bananas", price: 120, quantity: 3 },
+//   { lable: "Lemons", price: 70, quantity: 4 },
+// ];
+// const totalAmount = cart.reduce((acc, item) => {
+//   return (acc += item.price * item.quantity);
+// }, 0);
+// console.log("🚀 ~ totalAmount:", totalAmount);
+
+// /**
+//  * Метод toSorted
+//  *
+//  * - Свій порядок сортування чисел
+//  * - Свій порядок сортування рядків
+//  * - Сортування об'єктів
+//  *
+//  * За замовчуванням
+//  * - сортує за зростанням
+//  * - приводить елемент до рядків і сортує за [Unicode]
+//  */
+
+// const numbers = [1, 9, 6, 2, 3, 11];
+// const sorted = numbers.toSorted((a, b) => a - b);
+// console.log("🚀 ~ sorted:", sorted);
+
+// /**
+//  * Сортування масиву об'єктів
+//  */
+
+// const sortedByBestPlayers = players.toSorted(
+//   (a, b) => b.timePlayed - a.timePlayed
+// );
+// console.table("🚀 ~ sortedByBestPlayers:", sortedByBestPlayers);
+
+// const sortedByWorstPlayers = players.toSorted(
+//   (a, b) => a.timePlayed - b.timePlayed
+// );
+// console.table("🚀 ~ sortedByWorstPlayers:", sortedByWorstPlayers);
+
+// /**
+//  * По першій літері імені
+//  */
+// const byName = players.toSorted((a, b) => a.name.localeCompare(b.name));
+// console.table(byName);
+
+// /**
+//  * Нехай функція getAvailableCarNames повертає масив моделей автомобілів,
+//  * але тільки тих, які на розпродажі
+//  */
+// const getAvailableCarNames = cars => {
+//   return cars.filter(car => car.onSale).map(car => car.model);
+// };
+// console.table(getAvailableCarNames(allCars));
+
+// /**
+//  * Нехай функція getSortedCarsOnSale повертає масив автомобілів
+//  * на розпродажі (Властивість OnSale), відсортованих за зростанням ціни.
+//  */
+// const getSortedCarsOnSale = cars => {
+//   return cars.filter(car => car.onSale).toSorted((a, b) => a.price - b.price);
+// };
+
+// console.table(getSortedCarsOnSale(allCars));
