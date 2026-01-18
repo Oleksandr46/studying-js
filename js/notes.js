@@ -1215,3 +1215,21 @@
 //   .toSorted((firstAutor, secondAutor) => firstAutor.localeCompare(secondAutor));
 
 // console.log("🚀 ~ names:", names);
+
+// /**
+//  * Зміни код таким чином, щоб об'єкт parent став прототипом для об'єкта у змінній сhild.
+//  */
+// const parent = {
+//   name: "Stacey",
+//   surname: "Moore",
+//   age: 54,
+//   heritage: "Irish",
+// };
+
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+
+// console.log(parent.hasOwnProperty("surname"));
+// console.log(child.name);
+// console.log(child.surname);
