@@ -1233,3 +1233,173 @@
 // console.log(parent.hasOwnProperty("surname"));
 // console.log(child.name);
 // console.log(child.surname);
+
+// class User {
+//   constructor(name, email) {
+//     // Ініціалізація властивостей екземпляра
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
+
+// const mango = new User("Mango", "mango@mail.com");
+// console.log(mango); // { name: 'Mango', email: 'mango@mail.com' }
+
+// const poly = new User("Poly", "poly@mail.com");
+// console.log(poly); // { name: 'Poly', email: 'poly@mail.com' }
+
+// /**
+//  * Виконай рефакторинг класу Car. Додай публічну статичну властивість maxPrice зі значенням число 50000 -
+//  * максимально допустима ціна автомобіля.
+//  * Додай сеттеру price перевірку значення параметра newPrice, що передається.
+//  * Якщо воно більше за maxPrice, сеттер нічого не робить, а якщо менше або дорівнює, то перезаписує ціну автомобіля.
+//  */
+// class Car {
+//   static maxPrice = 50000;
+//   #price;
+
+//   constructor(params) {
+//     this.#price = params.price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice <= Car.maxPrice) {
+//       this.#price = newPrice;
+//     }
+//   }
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// /**
+//  * Додай класу Car публічний статичний метод checkPrice(price),
+//  * що приймає ціну автомобіля. Метод повинен порівняти значення параметра price і приватної статичної властивості maxPrice.
+//  * Якщо ціна автомобіля перевищує максимальну, метод повинен повернути рядок "Error! Price exceeds the maximum".
+//  * В іншому випадку метод повинен повернути рядок "Success! Price is within acceptable limits"
+//  */
+// class Car {
+//   static #maxPrice = 50000;
+//   static checkPrice(price) {
+//     if (price > Car.#maxPrice) {
+//       return `Error! Price exceeds the maximum`;
+//     }
+//     return `Success! Price is within acceptable limits`;
+//   }
+//   constructor(params) {
+//     this.price = params.price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// /**
+//  * Додай класу Admin метод constructor, який приймає один параметр params- об'єкт налаштувань
+//  * з двома властивостями email і access. Додай класу Admin публічну властивість access,
+//  * значення якої буде передаватися під час виклику конструктора.
+//  */
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//   }
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// /**
+//  * Додай класу Admin наступні властивості і методи.
+//  * Публічну властивість blacklistedEmails для зберігання чорного списку поштових адрес користувачів.
+//  * Значення за замовчуванням — це порожній масив.
+//  * Публічний метод blacklist(email) для додавання пошти у чорний список.
+//  * Метод повинен додавати значення параметра email в масив, що зберігається у властивості blacklistedEmails.
+//  * Публічний метод isBlacklisted(email) для перевірки пошти у чорному списку.
+//  * Метод повинен перевіряти наявність значення параметра email в масиві, що зберігається у властивості blacklistedEmails,
+//  * і повертати true або false.
+//  */
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//     this.blacklistedEmails = [];
+//   }
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
