@@ -922,3 +922,171 @@ const players = [
 // };
 
 // console.table(getSortedCarsOnSale(allCars));
+
+// /**
+//  * Напишіть метод calcTotalPrice(stoneName), який приймає назву
+//  * каменю і розраховує та повертає загальну вартість каменів з таким ім'ям,
+//  * ціною та кількістю з властивості stones.
+//  */
+// const chopShop = {
+//   stones: [
+//     { name: "Emerald", price: 1300, quantity: 4 },
+//     { name: "Diamand", price: 2700, quantity: 3 },
+//     { name: "Sapphire", price: 1400, quantity: 7 },
+//     { name: "Ruby", price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     const findStone = this.stones.find(stone => stone.name === stoneName);
+//     if (!findStone) {
+//       return `Sorry. Your stone doesnt exist is store`;
+//     }
+//     return findStone.price * findStone.quantity;
+//   },
+// };
+// console.log(chopShop.calcTotalPrice("Emerald")); //5200
+// console.log(chopShop.calcTotalPrice("Diamand")); //8100
+// console.log(chopShop.calcTotalPrice("Sapphire")); //9800
+// console.log(chopShop.calcTotalPrice("Ruby")); //1600
+// console.log(chopShop.calcTotalPrice("Sand"));
+
+// /**
+//  * Класи
+//  * - Оголошення класу
+//  * - Конструктор класу
+//  * - Методи класу
+//  * - Прототип екщемпляру
+//  * - Приватеі властивості
+//  * - Гетери і сеттери
+//  * - Статичні властивості
+//  */
+
+// class Car {
+//   static description = "Im only for class Car";
+//   static counter = 0;
+//   #brand;
+//   #model;
+//   constructor(brand, model, price) {
+//     this.#brand = brand;
+//     this.#model = model;
+//     this.price = price;
+//     Car.setCountOfInstances();
+//   }
+//   static setCountOfInstances() {
+//     this.counter += 1;
+//   }
+//   get brand() {
+//     return this.#brand;
+//   }
+//   set brand(updateBrandName) {
+//     if (updateBrandName.toLowerCase() === this.#brand.toLowerCase()) {
+//       this.#brand = updateBrandName;
+//     }
+//   }
+//   witoutGetBrand() {
+//     return this.#brand;
+//   }
+//   print() {
+//     return `You create car: ${this.#brand} ${this.#model} with price ${this.price} $`;
+//   }
+
+//   makeDiscont(discount) {
+//     this.price *= 1 - Number.parseInt(discount) / 100;
+//   }
+// }
+// const instanceAudi = new Car("Audi", "A5", 30_000);
+// console.log("🚀 ~ instanceAudi:", instanceAudi);
+
+// instanceAudi.makeDiscont("10%");
+// console.log(Car.description);
+// console.log(instanceAudi.brand);
+// console.log(instanceAudi.witoutGetBrand());
+// instanceAudi.brand = "ZAZ";
+// console.log(instanceAudi.brand);
+// const res = instanceAudi.print();
+// console.log("res", res);
+
+// const instanceNissan = new Car("Nissan", "GT-R", 40_000);
+// console.log("🚀 ~ instanceNissan:", instanceNissan);
+// const instanceCadillac = new Car("Cadillac", "ATS", 10_000);
+// console.log("🚀 ~ instanceCadillac:", instanceCadillac);
+// console.log(Car.counter);
+
+// /**
+//  * Напиши клас Blogger для створення об'єкта блогера з наступними властивостями:
+//  * - email - пошта, рядок
+//  * - age - вік, число
+//  * - numberOfPosts - кількість ростів, число
+//  * - topics - масив тем на яких спеціалізується блогер
+//  *
+//  * Клас чекає на один параметр - об'єкт налаштувань з одноіменними властивостями.
+//  *
+//  * Додай метод getInfo(), який, повертає рядок: User ${email}is ${age} years old and has ${numPost} posts.
+//  * - Додвй метод updatePostCount(value), який у параметрі value приймає кількість постів,
+//  * які потрібно додати користувачеві.
+//  */
+// class User {
+//   constructor() {}
+// }
+// const mango = new User({
+//   name: "mango@mail.com",
+//   age: 24,
+//   numberOfPosts: 20,
+//   topics: ["tech", "cooking"],
+// });
+
+// console.log(mango.getInfo());// User mango@mail.com is 24 yaers old and has 20 posts
+// mango.updatePostsCount(5);
+// console.log(mango.getInfo());// User mango@mail.com is 24 yaers old and has 25 posts
+
+// const poly = new User({
+//   name: "poly@mail.com",
+//   age: 19,
+//   numberOfPosts: 17,
+//   topics: ["sports", "gaming", "health"],
+// });
+
+// console.log(mango.getInfo());// User poly@mail.com is 19 yaers old and has 17 posts
+// mango.updatePostsCount(4);
+// console.log(mango.getInfo());// User mango@mail.com is 19 yaers old and has 21 posts
+
+// /**
+//  * Напиши клас User який створює об'єкт із властивостями login та email.
+//  * Оголоси приватні властивості #login та #email, доступ до яких зроби через
+//  * гетер та сетер login та email/
+//  */
+// const maogo = new User({
+//   login: "Mango",
+//   email: "mango@dog.woof",
+// });
+// console.log(mango.login);// Mango
+// mango.login = "Mangodoge";
+// console.log(mango.login);// Mangodoge
+
+// const poly = new User({
+//   login: "Poly",
+//   email: "poly@mail.com",
+// });
+// console.log(mango.login);// Poly
+// mango.login = "Polycutie";
+// console.log(mango.login);// Polycutie
+
+// /**
+//  * Напиши клас Storage який створює об'єкти для керування складом товарів.
+//  * При виклику отримуватиме один аргумент - початковий масив товарів і
+//  * записуватиме його властивість items.
+//  *
+//  * Додай методи класу:
+//  * - getItems() - повертає масив товарів.
+//  * - addItems(item) - отримує новий товар і додає його до поточних.
+//  * - removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
+//  */
+// const storage = new Storage(["🍎", "🍋", "🍇", "🍑"]);
+
+// const items = storage.getItems();
+// console.log(items); // ["🍎", "🍋", "🍇", "🍑"]
+
+// storage.addItem("🍌");
+// console.table(storage.items); //["🍎", "🍋", "🍇", "🍑", "🍌"]
+
+// storage.removeItem("🍋");
+// console.table(storage.items); //["🍎", "🍇", "🍑", "🍌"]
