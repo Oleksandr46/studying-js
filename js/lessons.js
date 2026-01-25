@@ -1024,51 +1024,87 @@ const players = [
 //  * - Додвй метод updatePostCount(value), який у параметрі value приймає кількість постів,
 //  * які потрібно додати користувачеві.
 //  */
-// class User {
-//   constructor() {}
+// class Blogger {
+//   constructor(params) {
+//     this.email = params.email;
+//     this.age = params.age;
+//     this.numberOfPosts = params.numberOfPosts;
+//     this.topics = params.topics;
+//   }
+//   getInfo() {
+//     return `Blogger ${this.email}is ${this.age} years old and has ${this.numberOfPosts} posts`;
+//   }
+//   updatePostsCount(value) {
+//     this.numberOfPosts += value;
+//   }
 // }
-// const mango = new User({
-//   name: "mango@mail.com",
+// const mango = new Blogger({
+//   email: "mango@mail.com",
 //   age: 24,
 //   numberOfPosts: 20,
 //   topics: ["tech", "cooking"],
 // });
 
-// console.log(mango.getInfo());// User mango@mail.com is 24 yaers old and has 20 posts
+// console.log(mango.getInfo()); // User mango@mail.com is 24 yaers old and has 20 posts
 // mango.updatePostsCount(5);
-// console.log(mango.getInfo());// User mango@mail.com is 24 yaers old and has 25 posts
+// console.log(mango.getInfo()); // User mango@mail.com is 24 yaers old and has 25 posts
 
-// const poly = new User({
-//   name: "poly@mail.com",
+// const poly = new Blogger({
+//   email: "poly@mail.com",
 //   age: 19,
 //   numberOfPosts: 17,
 //   topics: ["sports", "gaming", "health"],
 // });
 
-// console.log(mango.getInfo());// User poly@mail.com is 19 yaers old and has 17 posts
-// mango.updatePostsCount(4);
-// console.log(mango.getInfo());// User mango@mail.com is 19 yaers old and has 21 posts
+// console.log(poly.getInfo()); // User poly@mail.com is 19 yaers old and has 17 posts
+// poly.updatePostsCount(4);
+// console.log(poly.getInfo()); // User mango@mail.com is 19 yaers old and has 21 posts
 
 // /**
 //  * Напиши клас User який створює об'єкт із властивостями login та email.
 //  * Оголоси приватні властивості #login та #email, доступ до яких зроби через
 //  * гетер та сетер login та email/
 //  */
-// const maogo = new User({
+
+// class User {
+//   #login;
+//   #email;
+//   constructor(params) {
+//     this.#login = params.login;
+//     this.#email = params.email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogine) {
+//     this.#login = newLogine;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// const mango = new User({
 //   login: "Mango",
 //   email: "mango@dog.woof",
 // });
-// console.log(mango.login);// Mango
+// console.log(mango.login); // Mango
+// console.log(mango.email); // Mango
+
 // mango.login = "Mangodoge";
-// console.log(mango.login);// Mangodoge
+// console.log(mango.login); // Mangodoge
 
 // const poly = new User({
 //   login: "Poly",
 //   email: "poly@mail.com",
 // });
-// console.log(mango.login);// Poly
-// mango.login = "Polycutie";
-// console.log(mango.login);// Polycutie
+// console.log(poly.login); // Poly
+// console.log(poly.email); // Poly
+
+// poly.login = "Polycutie";
+// console.log(poly.login); // Polycutie
 
 // /**
 //  * Напиши клас Storage який створює об'єкти для керування складом товарів.
@@ -1080,13 +1116,32 @@ const players = [
 //  * - addItems(item) - отримує новий товар і додає його до поточних.
 //  * - removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
 //  */
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItems(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     // this.items = this.items.filter(el => el !== item);
+//     // альтернатианий варіант ⬇️
+//     const index = this.items.indexOf(item);
+//     if (index !== -1) {
+//       this.items.splice(index, 1);
+//     }
+//   }
+// }
 // const storage = new Storage(["🍎", "🍋", "🍇", "🍑"]);
 
 // const items = storage.getItems();
 // console.log(items); // ["🍎", "🍋", "🍇", "🍑"]
 
-// storage.addItem("🍌");
-// console.table(storage.items); //["🍎", "🍋", "🍇", "🍑", "🍌"]
+// storage.addItems("🍌");
+// console.log(storage.items); //["🍎", "🍋", "🍇", "🍑", "🍌"]
 
 // storage.removeItem("🍋");
-// console.table(storage.items); //["🍎", "🍇", "🍑", "🍌"]
+// console.log(storage.items); //["🍎", "🍇", "🍑", "🍌"]
