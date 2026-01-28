@@ -1403,3 +1403,256 @@
 // console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 // console.log(mango.isBlacklisted("mango@mail.com")); // false
 // console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+// /**
+//  * Module 7 DOM
+//  */
+// const element = document.querySelector(".list-item");
+// console.log("🚀 ~ element:", element);
+// const listItem = document.querySelectorAll(".list-item");
+// console.log("🚀 ~ listItem:", listItem);
+
+// const listWithClass = document.querySelector(".menu");
+// console.log("🚀 ~ listWithClass:", listWithClass);
+
+// const menuItemsByTagName = document.querySelectorAll("li");
+// console.log("🚀 ~ menuItemsByTagName:", menuItemsByTagName);
+
+// const menuItemsByTagClass = document.querySelectorAll(".menu-item");
+// console.log("🚀 ~ menuItemsByTagClass:", menuItemsByTagClass);
+
+// const firstMenuItem = document.querySelector(".menu-item");
+// firstMenuItem.style.color = "tomato";
+// console.log("🚀 ~ firstMenuItem:", firstMenuItem);
+
+// const link = document.querySelector(".link");
+// console.log(link.href);
+// link.href = "https://neo.goit.global";
+// console.log(link.href);
+
+// const imageOne = document.querySelector(".imageOne");
+// console.log(imageOne.src);
+// console.log(imageOne.alt);
+
+// imageOne.src = "https://picsum.photos/id/13/640/480";
+// imageOne.alt = "River bank";
+// console.log(imageOne.src);
+// console.log(imageOne.alt);
+
+// const el = document.querySelector(".text");
+// const nested = document.querySelector(".sub-text");
+// console.log(el.textContent);
+// console.log(nested.textContent);
+// el.textContent = "Username: Poly";
+// console.log(el.textContent);
+
+// // const textEl = document.querySelector(".article-text");
+// // console.log(textEl.textContent);
+// const titleEl = document.querySelector(".article-title");
+// titleEl.textContent = "Welcome to Bahamas!";
+// console.log(titleEl.textContent);
+
+// const link = document.querySelector(".link");
+// console.log(link.classList);
+
+// // const hasActiveClass = link.classList.contains("is-active");
+// const hasActiveClass = link.classList.contains("title");
+// console.log("🚀 ~ hasActiveClass:", hasActiveClass);
+// link.classList.add("special");
+// console.log(link.classList);
+
+// link.classList.remove("is-active");
+// console.log(link.classList);
+
+// link.classList.toggle("is-active");
+// console.log(link.classList);
+
+// link.classList.replace("special", "regular");
+// console.log(link.classList);
+
+// const button = document.querySelector(".btn");
+
+// button.style.backgroundColor = "teal";
+// button.style.fontSize = "24px";
+// button.style.textAlign = "center";
+// console.log(button.style);
+
+// const imageTwo = document.querySelector(".imageTwo");
+// console.log(imageTwo.hasAttribute("src"));
+// console.log(imageTwo.hasAttribute("href"));
+// console.log(imageTwo.getAttribute("alt"));
+
+// imageTwo.setAttribute("alt", "Amazing nature");
+// console.log(imageTwo.getAttribute("alt"));
+
+// imageTwo.removeAttribute("alt");
+// console.log(imageTwo.hasAttribute("alt"));
+
+// const imageFree = document.querySelector(".imageFree");
+// console.log(imageFree.attributes);
+
+// console.log(imageFree.hasAttribute("src"));
+// console.log(imageFree.getAttribute("alt"));
+// imageFree.setAttribute("alt", "Amazing nature");
+// console.log(imageFree.getAttribute("alt"));
+
+// const saveBtn = document.querySelector('button[data-action="save"]');
+// console.log(saveBtn.dataset.action);
+// const closeBtn = document.querySelector('button[data-action="close"]');
+// console.log(closeBtn.dataset.action);
+
+// saveBtn.dataset.action = "update";
+// saveBtn.dataset.role = "admin";
+// console.log(saveBtn.dataset.action);
+// console.log(saveBtn.dataset.role);
+
+// const heading = document.createElement("h1");
+// heading.classList.add("title");
+// heading.textContent = "This is a heading";
+// console.log(heading);
+// const image = document.createElement("img");
+// image.src = "https://picsum.photos/id/11/320/240";
+// image.alt = "Nature";
+// console.log(image);
+
+// const list = document.querySelector(".usernames");
+// const lastItem = document.createElement("li");
+// lastItem.textContent = "Poly";
+// list.append(lastItem);
+
+// const firstItem = document.createElement("li");
+// firstItem.textContent = "Ajax";
+// list.prepend(firstItem);
+
+// const text = document.querySelector(".text");
+// console.log(text.textContent);
+// text.remove();
+
+// const article = document.querySelector(".article");
+// console.log(article.innerHTML);
+
+// const title = document.querySelector(".article .title");
+// title.innerHTML = 'New and <span class="accent">improved</span> title';
+// console.log(title.innerHTML);
+
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
+
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
+
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+// const list = document.querySelector(".list");
+
+// const markup = technologies
+//   .map(technology => `<li class="list-item">${technology}</li>`)
+//   .join("");
+// console.log(markup);
+// list.innerHTML = markup;
+
+// const list = document.querySelector(".list");
+// const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = newTechnologies
+//   .map(technology => `<li class="list-item new">${technology}</li>`)
+//   .join("");
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("afterend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+
+// const button = document.querySelector(".my-button");
+
+// const handleClock = () => {
+//   console.log("The button was pressed and now the next image will appear");
+// };
+// button.addEventListener("click", handleClock);
+
+// const singleBtn = document.querySelector("#single");
+
+// const handleClick = () => {
+//   console.log("click event listener callback");
+// };
+// singleBtn.addEventListener("click", handleClick);
+// //====================================================
+// const multiBtn = document.querySelector("#multiple");
+// const firstCallback = () => {
+//   console.log("first callback!");
+// };
+// const secondCallback = () => {
+//   console.log("Second callback!");
+// };
+// const thirdCallback = () => {
+//   console.log("Third callback!");
+// };
+
+// multiBtn.addEventListener("click", firstCallback);
+// multiBtn.addEventListener("click", secondCallback);
+// multiBtn.addEventListener("click", thirdCallback);
+
+// const addListenerBtn = document.querySelector(".js-add");
+// const removeListenerBtn = document.querySelector(".js-remove");
+// const btn = document.querySelector(".target-btn");
+
+// const handleClick = () => {
+//   console.log("click event listener callback");
+// };
+// addListenerBtn.addEventListener("click", () => {
+//   btn.addEventListener("click", handleClick);
+//   console.log("click event listener was added to btn");
+// });
+
+// removeListenerBtn.addEventListener("click", () => {
+//   btn.removeEventListener("click", handleClick);
+//   console.log("click event listener was removed from btn");
+// });
+
+// const button = document.querySelector(".btnn");
+// const handleClick = event => {
+//   console.log("event: ", event);
+//   console.log("event type: ", event.type);
+//   console.log("currentTarget: ", event.currentTarget);
+// };
+// button.addEventListener("click", handleClick);
+
+// document.addEventListener("keydown", event => {
+//   console.log("Keydown: ", event);
+// });
+// document.addEventListener("keyup", event => {
+//   console.log("Keyup: ", event);
+// });
+
+//=======================================================
+// const clearLogBtn = document.querySelector(".js-clear");
+// const logList = document.querySelector(".log-list");
+
+// let keypressCounter = 1;
+
+// console.log(clearLogBtn);
+
+// document.addEventListener("keydown", logMessage);
+// document.addEventListener("keyup", logMessage);
+// clearLogBtn.addEventListener("click", reset);
+
+// function logMessage({ type, key, code }) {
+//   const markup = `<div class="log-item">
+//   <span class="chip">${keypressCounter}</span>
+//   <ul>
+//   <li><b>Event</b>: ${type}</li>
+//   <li><b>Key</b>: ${key}</li>
+//   <li><b>Code</b>: ${code}</li>
+//   </ul>
+//   </div>`;
+
+//   logList.insertAdjacentHTML("afterbegin", markup);
+//   if (type === "keyup") {
+//     incrementKeypressCounter();
+//   }
+// }
+// function reset() {
+//   keypressCounter = 1;
+//   logList.innerHTML = "";
+// }
+
+// function incrementKeypressCounter() {
+//   keypressCounter += 1;
+// }
+//=======================================
