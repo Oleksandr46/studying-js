@@ -4,8 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <p><a href="./index.html">Go back</a></p>
+    <form class="js-form feedback-form">
+      <div class="wrapper">
+        <input
+          type="text"
+          name="email"
+          class="form-input"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          class="form-input"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <textarea
+        name="comment"
+        cols="30"
+        rows="10"
+        class="form-texterea"
+        placeholder="Comment"
+      ></textarea>
+      <button class="form-button" type="submit">Submit</button>
+    </form>
+    <script src="./js/03-forms.js"></script>
   </body>
 </html>
