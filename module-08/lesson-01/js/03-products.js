@@ -61,3 +61,4 @@ function createCardsMarkup(cards) {
     })
     .join("");
 }
+//!===========================================

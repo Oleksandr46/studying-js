@@ -1,0 +1,12 @@
+{
+  "name": "Mango",
+  "age": 24,
+  "hobbies": ["tennis", "football", "swimming"],
+  "isHappy": true,
+  "hasFriends": null,
+  "favoriteBook": {
+    "title": "Harry Potter",
+    "autor": "Joan Roaling",
+    "pages": 100
+  }
+}
