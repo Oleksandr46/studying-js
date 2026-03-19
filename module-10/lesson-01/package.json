@@ -1,0 +1,20 @@
+setTimeout(() => {
+  console.log("Hello 1");
+}, 1000);
+setTimeout(() => {
+  console.log("Hello 2");
+}, 5000);
+{
+  "name": "lesson-01",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  }
+}
